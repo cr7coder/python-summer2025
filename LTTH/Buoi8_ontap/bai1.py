@@ -10,7 +10,7 @@ def createList():
     A = []
     B = []
     C = set()
-    i = 1
+    i=1
     while True:
         dl = input(f"DL-{i} = ")
         if dl == "":
@@ -21,7 +21,7 @@ def createList():
         except ValueError:
             try:
                 number = float(dl)
-                B.append(number)  # ✅ đúng kiểu float
+                B.append(number)  
             except ValueError:
                 C.add(dl)
         i += 1

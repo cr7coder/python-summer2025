@@ -13,24 +13,29 @@
 # kq=" ".join(u)
 # print(kq)
 
+s=input("chuoi=")
+if s.count("!")%2==1:
+    s+="!"
+print("S=",s)
+
 # n=input("Day so:")
 # n=n.split(",")
 # ds=[ int(x) for x in n]
 # ds.reverse()
 # print(ds)
-def phantich(n):
-    if n%2!=0:
-        return []
-    ds=[]
-    for a in range(2,n,2):
-        for b in range (2,n-a,2):
-            for c in range(2,n-a-b,2):
-                d=n-a-b-c
-                if n>=2 and n%2==0:
-                    ds.append(tuple([a,b,c,d]))
-    return ds
+# def phantich(n):
+#     if n%2!=0:
+#         return []
+#     ds=[]
+#     for a in range(2,n,2):
+#         for b in range (2,n-a,2):
+#             for c in range(2,n-a-b,2):
+#                 d=n-a-b-c
+#                 if n>=2 and n%2==0:
+#                     ds.append(tuple([a,b,c,d]))
+#     return ds
 
-n=int(input("N="))
-a=phantich(n)
-print(f"Co {len(a)} cach phân tích {n} thanh 4 số nguyên dương chẵn")
-print(a)
+# n=int(input("N="))
+# a=phantich(n)
+# print(f"Co {len(a)} cach phân tích {n} thanh 4 số nguyên dương chẵn")
+# print(a)

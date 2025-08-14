@@ -7,6 +7,9 @@
 def tong(n):
     tong=0
     while n>0:
+        # sodu=n%10
+        # tong=tong+sodu
+        # n=n//10
         sodu=n%10
         tong=tong+sodu
         n=n//10
