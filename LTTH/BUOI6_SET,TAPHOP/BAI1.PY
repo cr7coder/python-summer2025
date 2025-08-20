@@ -1,21 +1,35 @@
-def nhap_tap(ten_tap):
-    tap = set()
-    print(f"Nhập các phần tử cho tập {ten_tap} (Enter để kết thúc):")
+# def nhap_tap(ten_tap):
+#     tap = set()
+#     print(f"Nhập các phần tử cho tập {ten_tap} (Enter để kết thúc):")
+#     while True:
+#         x = input(f"{ten_tap} > ").strip()
+#         if x == "":
+#             break
+#         tap.add(x)
+#     return tap
+def tap(ten):
+    tap=set()
+    i=0
+    print("Nhập phần tử cho tập {ten}:")
     while True:
-        x = input(f"{ten_tap} > ").strip()
-        if x == "":
+        x=input(f"Phần tử thứ {i+1}:")
+        if x=="":
             break
         tap.add(x)
+        i+=1
     return tap
-
-A = nhap_tap("A")
-B = nhap_tap("B")
+A = tap("A")
+B = tap("B")
 if B.issubset(A):
-    print("B là tập con của A.")
-    A.difference_update(B)  
-    print("Tập A sau khi xóa các phần tử của B:", A)
-else:
-    print("B không là tập con của A.")
+    print("B là tập con của A")
+    A.difference_update(B)
+    print("Tập B sau khi xóa tập A:",A)
+# if B.issubset(A):
+#     print("B là tập con của A.")
+#     A.difference_update(B)  
+#     print("Tập A sau khi xóa các phần tử của B:", A)
+# else:
+#     print("B không là tập con của A.")
 Z = A.symmetric_difference(B)
 print("Tập Z (các phần tử thuộc A hoặc B nhưng không đồng thời thuộc cả hai):", Z)
 

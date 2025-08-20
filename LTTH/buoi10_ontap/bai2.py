@@ -14,7 +14,8 @@ m=[x for x in s if len(x)==dainhat]
 m.sort(key = lambda x:(x[0].isupper(),x))
 print("So tu dai nhat la: ")
 print(m)
-
+m.sort(key=lambda x:(x[0].islower(),x))
+# sorted(dssv.items(),key=lambda item:item[1] reverse=True)
 # s=input("S:")
 # s=s.split()
 # print(s)
